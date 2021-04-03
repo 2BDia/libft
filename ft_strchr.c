@@ -14,10 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	char *scpy;
+	int		i;
+	char	*scpy;
 
-	scpy = (char*)s;
+	scpy = (char *)s;
 	i = 0;
 	while (scpy[i])
 	{
