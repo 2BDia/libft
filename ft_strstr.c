@@ -28,7 +28,7 @@ static int	ft_mstrcmp(char *str, char *to_find, int j)
 		return (1);
 }
 
-char		*ft_strstr(const char *haystack, const char *needle)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int		j;
 	int		i;
