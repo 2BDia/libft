@@ -13,23 +13,23 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char        *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char *dest;
-    int i;
-    int l;
+	char *dest;
+	int i;
+	int l;
 
-    l = 0;
-    while (s[l] != '\0')
-        l++;
-    i = 0;
-    if (!(dest = malloc(sizeof(dest) * l + 1)))
+	l = 0;
+	while (s[l] != '\0')
+		l++;
+	i = 0;
+	if (!(dest = (char *)malloc(sizeof(dest) * l + 1)))
 		return (NULL);
-    while (i < l)
-    {
-        dest[i] = s[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return (dest);
+	while (i < l)
+	{
+		dest[i] = s[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
