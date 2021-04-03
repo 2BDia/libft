@@ -40,12 +40,18 @@ int main(void)
 
     //memccpy !!
     // char src[] = "Helow";
-    // char dest[6];
-    // char *str;
+    // char dest1[6];
+    // char *str1;
+	// char dest2[6];
+	// char *str2;
 
-    // str = memccpy(dest, src, 'o', 10);
-    // printf("%s\n", dest);
-    // printf("%d\n", *str);
+    // str1 = memccpy(dest1, src, 'o', 3);
+    // printf("%s\n", dest1);
+    // printf("%c\n", *(str1 - 1));
+
+	// str2 = ft_memccpy(dest2, src, 'o', 3);
+	// printf("%s\n", dest2);
+    // printf("%c\n", *(str2 - 1));
 
     //memmove !!
     // char src[] = "Hello";
@@ -203,6 +209,22 @@ int main(void)
 	// printf("%d\n", ft_isprint('u'));
 	// printf("%d\n", isprint(127));
 	// printf("%d\n", ft_isprint(127));
+
+	//toupper
+	// printf("%c\n", toupper('a'));
+	// printf("%c\n", ft_toupper('a'));
+	// printf("%c\n", toupper('~'));
+	// printf("%c\n", ft_toupper('~'));
+	// printf("%c\n", toupper('Z'));
+	// printf("%c\n", ft_toupper('Z'));
+
+	//tolower
+	// printf("%c\n", tolower('A'));
+	// printf("%c\n", ft_tolower('A'));
+	// printf("%c\n", tolower('~'));
+	// printf("%c\n", ft_tolower('~'));
+	// printf("%c\n", tolower('z'));
+	// printf("%c\n", ft_tolower('z'));
 
 	return (0);
 }
