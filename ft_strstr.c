@@ -14,7 +14,7 @@
 
 static int	ft_mstrcmp(char *str, char *to_find, int j)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[j] == to_find[i] && str[j] != '\0' && to_find[i] != '\0')
@@ -30,15 +30,15 @@ static int	ft_mstrcmp(char *str, char *to_find, int j)
 
 char		*ft_strstr(const char *haystack, const char *needle)
 {
-	int j;
-	int i;
-	char *haystackcpy;
-	char *needlecpy;
+	int		j;
+	int		i;
+	char	*haystackcpy;
+	char	*needlecpy;
 
 	j = 0;
 	i = 0;
-	haystackcpy = (char*)haystack;
-	needlecpy = (char*)needle;
+	haystackcpy = (char *)haystack;
+	needlecpy = (char *)needle;
 	if (needlecpy[0] == '\0')
 		return (haystackcpy);
 	while (haystackcpy[j] != '\0')
