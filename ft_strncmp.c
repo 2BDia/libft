@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:51:37 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/03 20:03:19 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/04 16:50:06 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	char	*s1cpy;
-	char	*s2cpy;
 
-	s1cpy = (char *)s1;
-	s2cpy = (char *)s2;
 	i = 0;
 	if (n == 0)
 		return (0);
