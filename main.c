@@ -104,20 +104,20 @@ int main(void)
 	// printf("%s\n", dest);
 
 	//strlcat
-	// int size = 12;
-	// char dest[] = "Hello";
-	// char src[] = "Goodbye";
-	// char buffer[size];
-	// int i = 0;
+	int size = 0;
+	char dest[] = "Hello";
+	char src[] = "Goodbye";
+	char buffer[size];
+	int i = 0;
 
-	// while (dest[i])
-	// {
-	// 	buffer[i] = dest[i];
-	// 	i++;
-	// }
+	while (dest[i])
+	{
+		buffer[i] = dest[i];
+		i++;
+	}
 
-	// printf("%zu\n", strlcat(buffer, src, size));
-	// printf("%s", buffer);
+	printf("%zu\n", strlcat(buffer, src, size));
+	printf("%s", buffer);
 
     //strchr
     // char str[] = "Trouve un z dans cette chaine!";
