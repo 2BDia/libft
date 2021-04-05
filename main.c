@@ -229,16 +229,16 @@ int main(void)
     // free(dest);
 
 	//calloc
-	int	*a;
-	int	count = 5;
-	int	i = 0;
+	// int	*a;
+	// int	count = 5;
+	// int	i = 0;
 
-	a = ft_calloc(count, sizeof(int));
+	// a = ft_calloc(count, sizeof(int));
 
-	while (i < count)
-	{
-		printf("%d\n", a[i++]);
-	}
-	free(a);
-	return (0);
+	// while (i < count)
+	// {
+	// 	printf("%d\n", a[i++]);
+	// }
+	// free(a);
+	// return (0);
 }
