@@ -46,11 +46,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			if (ft_mstrcmp(haystackcpy, needlecpy, j) == 1)
 			{
 				if (len < j + (ft_strlen(needlecpy)))
-					return (NULL);
+					return ((void *)0);
 				return (haystackcpy + j);
 			}
 		}
 		j++;
 	}
-	return (NULL);
+	return ((void *)0);
 }

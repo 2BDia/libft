@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
@@ -27,5 +25,5 @@ char	*ft_strrchr(const char *s, int c)
 			return (scpy + i);
 		i--;
 	}
-	return (NULL);
+	return ((void *)0);
 }

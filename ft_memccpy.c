@@ -27,12 +27,12 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		i++;
 	}
 	if (i == n)
-		return (NULL);
+		return ((void *)0);
 	if (srccpy[i] == c)
 	{
 		destcpy[i] = srccpy[i];
 		i++;
 		return (destcpy + i);
 	}
-	return (NULL);
+	return ((void *)0);
 }
