@@ -38,20 +38,20 @@ int main(void)
     // ft_memcpy(dest, src, 3);
     // printf("%s\n", dest);
 
-    //memccpy !!
-    char src[] = "Helow";
-    char dest1[6];
-    char *str1;
-	char dest2[6];
-	char *str2;
+    //memccpy
+    // char src[] = "Helow";
+    // char dest1[6];
+    // char *str1;
+	// char dest2[6];
+	// char *str2;
 
-    str1 = memccpy(dest1, src, 'o', 3);
-    printf("%s\n", dest1);
-    printf("%c\n", *(str1 - 1));
+    // str1 = memccpy(dest1, src, 'o', 3);
+    // printf("%s\n", dest1);
+    // printf("%c\n", *(str1 - 1));
 
-	str2 = ft_memccpy(dest2, src, 'o', 3);
-	printf("%s\n", dest2);
-    printf("%c\n", *(str2 - 1));
+	// str2 = ft_memccpy(dest2, src, 'o', 3);
+	// printf("%s\n", dest2);
+    // printf("%c\n", *(str2 - 1));
 
     //memmove
     // char src1[] = "Hello";
@@ -65,10 +65,10 @@ int main(void)
 
 	// char src1[] = "Hello";
     // char dest1[5];
-	char src2[] = "Hello";
+	// char src2[] = "Hello";
     
     // printf("%s\n", memmove(dest1, src1, 5));
-	printf("%s\n", ft_memmove(src2 + 1, src2, 5));
+	// printf("%s\n", ft_memmove(src2 + 1, src2, 5));
 
     //memchr
 	// char src1[] = "trouve un z ici";
@@ -96,42 +96,28 @@ int main(void)
 
     // printf("%zu", ft_strlen(str));
 
-    //strdup
-    // char str[] = "Ca commence à faire beaucoup j'ai plus d'inspi";
-    // char *dest;
+	//strlcpy
+	// char	src[] = "Copier";
+	// char	dest[] = "Hello";
 
-    // dest = ft_strdup(str);
-    // printf("%s", dest);
-    // free(dest);
+	// printf("%zu\n", ft_strlcpy(dest, src, 7));
+	// printf("%s\n", dest);
 
-    //strcpy
-    // char src[] = "Hola";
-    // char dest[] = "Hello";
+	//strlcat
+	// int size = 12;
+	// char dest[] = "Hello";
+	// char src[] = "Goodbye";
+	// char buffer[size];
+	// int i = 0;
 
-    // ft_strcpy(dest, src);
-    // printf("%s", dest);
+	// while (dest[i])
+	// {
+	// 	buffer[i] = dest[i];
+	// 	i++;
+	// }
 
-    //strncpy
-    // char src[] = "Hola";
-    // char dest[] = "Bonjour";
-
-    // printf("%s\n", ft_strncpy(dest, src, 0));
-    // printf("%s\n", ft_strncpy(dest, src, 3));
-    // printf("%s\n", ft_strncpy(dest, src, 5));
-
-    //strcat
-    // char src[] = " a tous!";
-    // char dest[] = "Bonjour";
-
-    // printf("%s\n", ft_strcat(dest, src));
-    // printf("%s\n", strcat(dest, src));
-
-    //strncat
-    // char src[] = " a tous!";
-    // char dest[] = "Bonjour";
-
-    // printf("%s\n", ft_strncat(dest, src, 5));
-    // printf("%s\n", strncat(dest, src, 5));
+	// printf("%zu\n", strlcat(buffer, src, size));
+	// printf("%s", buffer);
 
     //strchr
     // char str[] = "Trouve un z dans cette chaine!";
@@ -145,12 +131,6 @@ int main(void)
     // printf("%s\n", ft_strrchr(str, 'z'));
     // printf("%s\n", strrchr(str, 'z'));
 
-    //strstr
-    // char str1[] = "this is javatpoint with c and java";
-
-    // printf("%s\n", strstr(str1, "java"));
-    // printf("%s\n", ft_strstr(str1, "java"));
-
     //strnstr
     // char str2[] = "this is javatpoint with c and java";
 
@@ -158,19 +138,6 @@ int main(void)
     // printf("%s\n", ft_strnstr(str2, "is", 3));
     // printf("%s\n", strnstr(str2, "is", 4));
     // printf("%s\n", ft_strnstr(str2, "is", 4));
-
-    //strcmp
-    // char str1[] = "pare!l";
-    // char str2[] = "pare!l";
-
-    // printf("%d\n", strcmp(str1, str2));
-	// printf("%d\n", ft_strcmp(str1, str2));
-
-    // char str3[] = "different";
-    // char str4[] = "d1fferent";
-
-	// printf("%d\n", strcmp(str3, str4));
-	// printf("%d\n", ft_strcmp(str3, str4));
 
 	//strncmp
 	// char str1[] = "pare!l";
@@ -253,5 +220,25 @@ int main(void)
 	// printf("%c\n", tolower('z'));
 	// printf("%c\n", ft_tolower('z'));
 
+	//strdup
+    // char str[] = "Ca commence à faire beaucoup j'ai plus d'inspi";
+    // char *dest;
+
+    // dest = ft_strdup(str);
+    // printf("%s", dest);
+    // free(dest);
+
+	//calloc
+	int	*a;
+	int	count = 5;
+	int	i = 0;
+
+	a = ft_calloc(count, sizeof(int));
+
+	while (i < count)
+	{
+		printf("%d\n", a[i++]);
+	}
+	free(a);
 	return (0);
 }
