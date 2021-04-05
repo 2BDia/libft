@@ -39,40 +39,57 @@ int main(void)
     // printf("%s\n", dest);
 
     //memccpy !!
-    // char src[] = "Helow";
-    // char dest1[6];
-    // char *str1;
-	// char dest2[6];
-	// char *str2;
+    char src[] = "Helow";
+    char dest1[6];
+    char *str1;
+	char dest2[6];
+	char *str2;
 
-    // str1 = memccpy(dest1, src, 'o', 3);
-    // printf("%s\n", dest1);
-    // printf("%c\n", *(str1 - 1));
+    str1 = memccpy(dest1, src, 'o', 3);
+    printf("%s\n", dest1);
+    printf("%c\n", *(str1 - 1));
 
-	// str2 = ft_memccpy(dest2, src, 'o', 3);
-	// printf("%s\n", dest2);
-    // printf("%c\n", *(str2 - 1));
+	str2 = ft_memccpy(dest2, src, 'o', 3);
+	printf("%s\n", dest2);
+    printf("%c\n", *(str2 - 1));
 
     //memmove
-    char src1[] = "Hello";
-    char dest1[5];
-	char src2[] = "Hello";
-    
-    memmove(dest1, src1, 5);
-    printf("%s\n", dest1);
-	memmove(src2 + 1, src2, 5);
-	printf("%s\n", src2);
-
-	// char src1[] = "Hello";
+    // char src1[] = "Hello";
     // char dest1[5];
 	// char src2[] = "Hello";
     
-    // printf("%s\n", ft_memmove(dest1, src1, 5));
-	// printf("%s\n", ft_memmove(src2 + 1, src2, 5));
+    // memmove(dest1, src1, 5);
+    // printf("%s\n", dest1);
+	// memmove(src2 + 1, src2, 5);
+	// printf("%s\n", src2);
+
+	// char src1[] = "Hello";
+    // char dest1[5];
+	char src2[] = "Hello";
+    
+    // printf("%s\n", memmove(dest1, src1, 5));
+	printf("%s\n", ft_memmove(src2 + 1, src2, 5));
 
     //memchr
+	// char src1[] = "trouve un z ici";
+	// printf("%s\n", memchr(src1, 'z', 15));
+	// printf("%s\n", memchr(src1, 'z', 5));
+	// printf("%s\n", ft_memchr(src1, 'z', 15));
+	// printf("%s\n", ft_memchr(src1, 'z', 5));
 
     //memcmp
+	// char	str1[] = "A tester";
+	// char	str2[] = "A tester";
+	// char	str3[] = "A testur";
+
+	// printf("%d\n", memcmp(str1, str2, 8));
+	// printf("%d\n", ft_memcmp(str1, str2, 8));
+	// printf("%d\n", memcmp(str1, str3, 8));
+	// printf("%d\n", ft_memcmp(str1, str3, 8));
+	// printf("%d\n", memcmp(str3, str1, 8));
+	// printf("%d\n", ft_memcmp(str3, str1, 8));
+	// printf("%d\n", memcmp(str1, str3, 3));
+	// printf("%d\n", ft_memcmp(str1, str3, 3));
 
     //strlen
     // char str[] = "Salut";
