@@ -53,12 +53,22 @@ int main(void)
 	// printf("%s\n", dest2);
     // printf("%c\n", *(str2 - 1));
 
-    //memmove !!
-    // char src[] = "Hello";
-    // char dest[5];
+    //memmove
+    char src1[] = "Hello";
+    char dest1[5];
+	char src2[] = "Hello";
     
-    // memcpy(src + 1, src, 5);
-    // printf("%s\n", src);
+    memmove(dest1, src1, 5);
+    printf("%s\n", dest1);
+	memmove(src2 + 1, src2, 5);
+	printf("%s\n", src2);
+
+	// char src1[] = "Hello";
+    // char dest1[5];
+	// char src2[] = "Hello";
+    
+    // printf("%s\n", ft_memmove(dest1, src1, 5));
+	// printf("%s\n", ft_memmove(src2 + 1, src2, 5));
 
     //memchr
 
@@ -146,25 +156,25 @@ int main(void)
 	// printf("%d\n", ft_strcmp(str3, str4));
 
 	//strncmp
-	char str1[] = "pare!l";
-    char str2[] = "pare!l";
+	// char str1[] = "pare!l";
+    // char str2[] = "pare!l";
 
-    printf("%d\n", strncmp(str1, str2, 7));
-	printf("%d\n", ft_strncmp(str1, str2, 7));
+    // printf("%d\n", strncmp(str1, str2, 7));
+	// printf("%d\n", ft_strncmp(str1, str2, 7));
 
-    char str3[] = "different";
-    char str4[] = "d1fferent";
+    // char str3[] = "different";
+    // char str4[] = "d1fferent";
 
-	printf("%d\n", strncmp(str3, str4, 8));
-	printf("%d\n", ft_strncmp(str3, str4, 8));
+	// printf("%d\n", strncmp(str3, str4, 8));
+	// printf("%d\n", ft_strncmp(str3, str4, 8));
 
-    char str5[] = "hello";
-    char str6[] = "henlo";
+    // char str5[] = "hello";
+    // char str6[] = "henlo";
 
-	printf("%d\n", strncmp(str5, str6, 5));
-	printf("%d\n", ft_strncmp(str5, str6, 5));
-	printf("%d\n", strncmp(str5, str6, 2));
-	printf("%d\n", ft_strncmp(str5, str6, 2));
+	// printf("%d\n", strncmp(str5, str6, 5));
+	// printf("%d\n", ft_strncmp(str5, str6, 5));
+	// printf("%d\n", strncmp(str5, str6, 2));
+	// printf("%d\n", ft_strncmp(str5, str6, 2));
 
 	//atoi
 	// char nb[] = "  		-2147483648";
