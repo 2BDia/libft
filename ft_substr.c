@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/03 16:51:09 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/03 16:51:09 by rvan-aud         ###   ########.fr       */
+/*   Created: 2021/04/06 13:55:33 by rvan-aud          #+#    #+#             */
+/*   Updated: 2021/04/06 13:55:33 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*srccpy;
-	char	*destcpy;
-	size_t	i;
+	unsigned int	i;
+	char			*str;
 
-	srccpy = (char *)src;
-	destcpy = (char *)dest;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
-	while (srccpy && i < n && srccpy[i] != c)
+	while (s[i + start] && i < len)
 	{
-		destcpy[i] = srccpy[i];
+		str[i] = s[i + start];
 		i++;
 	}
-	if (i == n)
-		return ((void *)0);
-	if (srccpy[i] == c)
-	{
-		destcpy[i] = srccpy[i];
-		i++;
-		return (destcpy + i);
-	}
-	return ((void *)0);
+	str[i] = '\0';
+	return (str);
 }

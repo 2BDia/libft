@@ -6,11 +6,11 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 12:01:25 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/05 17:31:51 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/06 14:51:15 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

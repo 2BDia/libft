@@ -6,11 +6,11 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 10:01:26 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/05 17:32:00 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/06 14:51:35 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
