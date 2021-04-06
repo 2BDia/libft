@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/02 10:55:22 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/02 10:55:24 by rvan-aud         ###   ########.fr       */
+/*   Created: 2021/04/06 15:47:17 by rvan-aud          #+#    #+#             */
+/*   Updated: 2021/04/06 15:47:17 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
+	int		i;
+	int		lens1;
+	int		lenset;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	lens1 = ft_strlen(s1);
+	lenset = ft_strlen(set);
+	
 }

@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:09:16 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/05 17:54:06 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/06 13:32:05 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	int		lendst;
-	int		lensrc;
+	size_t	lendst;
+	size_t	lensrc;
 
 	i = 0;
 	lendst = ft_strlen(dst);
@@ -31,10 +31,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	if ((lendst + i) == dstsize && lendst < dstsize)
-		dst[--i] = '\0';
+		dst[lendst + --i] = '\0';
 	else
-		dst[i] = '\0';
-	if (i == dstsize)
-		dst[i] = '\0';
-	return (lendst + ft_strlen(src));
+		dst[lendst + i] = '\0';
+	return (lendst + lensrc);
 }

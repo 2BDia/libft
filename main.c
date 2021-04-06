@@ -104,20 +104,20 @@ int main(void)
 	// printf("%s\n", dest);
 
 	//strlcat
-	int size = 0;
-	char dest[] = "Hello";
-	char src[] = "Goodbye";
-	char buffer[size];
-	int i = 0;
+	// int size = 0;
+	// char dest[] = "Hello";
+	// char src[] = "Goodbye";
+	// char buffer[size];
+	// int i = 0;
 
-	while (dest[i])
-	{
-		buffer[i] = dest[i];
-		i++;
-	}
+	// while (dest[i])
+	// {
+	// 	buffer[i] = dest[i];
+	// 	i++;
+	// }
 
-	printf("%zu\n", strlcat(buffer, src, size));
-	printf("%s", buffer);
+	// printf("%zu\n", ft_strlcat(buffer, src, size));
+	// printf("%s", buffer);
 
     //strchr
     // char str[] = "Trouve un z dans cette chaine!";
@@ -240,5 +240,44 @@ int main(void)
 	// 	printf("%d\n", a[i++]);
 	// }
 	// free(a);
+
+	//substr
+	// char str[] = "Salut, ca va?";
+	// char *dest;
+
+	// dest = ft_substr(str, 7, 4);
+	// printf("%s", dest);
+	// free(dest);
+
+	//strjoin
+	// char	s1[] = "First and";
+	// char	s2[] = " second strings";
+	// char *dest;
+
+	// dest = ft_strjoin(s1, s2);
+	// printf("%s", dest);
+	// free(dest);
+
+	//strtrim
+
+
+	//slpit
+	char	str[] = "SalutcccBonjourccokchellocahah";
+	char	**strs;
+	int		i;
+
+	i = 0;
+	strs = ft_split(str, 'c');
+	if (strs != NULL)
+	{
+		while (strs[i])
+			printf("%s\n", strs[i++]);
+		i = 0;
+		while (strs[i])
+			free(strs[i++]);
+		free(strs);	
+	}
+	
+
 	// return (0);
 }
