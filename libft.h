@@ -14,6 +14,10 @@
 # define LIBFT_H
 
 # include <string.h>
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
+# define LLONG_MAX 9223372036854775807
+# define LLONG_MIN "-9223372036854775808"
 
 /*
 ** Mandatory part one

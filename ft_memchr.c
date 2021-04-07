@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 11:33:14 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/06 14:51:10 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/07 16:19:11 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (scpy + i);
 		i++;
 	}
-	return ((void *)0);
+	if (c == '\0')
+		return (scpy + i);
+	return (NULL);
 }

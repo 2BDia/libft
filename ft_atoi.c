@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	checkspace(char *str)
+#include "libft.h"
+
+static int	checkspace(const char *str)
 {
 	if (*str == ' ' || *str == '\n' || *str == '\f'
 		|| *str == '\r' || *str == '\t' || *str == '\v')
@@ -19,9 +21,9 @@ static int	checkspace(char *str)
 		return (0);
 }
 
-static void	checksign(char *nptrcpy, int *i, int *sign)
+static void	checksign(const char *nptr, int *i, int *sign)
 {
-	if (nptrcpy[*i] == '-')
+	if (nptr[*i] == '-')
 	{
 		*sign = 1;
 		*i += 1;
@@ -30,23 +32,27 @@ static void	checksign(char *nptrcpy, int *i, int *sign)
 
 int	ft_atoi(const char *nptr)
 {
-	char	*nptrcpy;
 	int		sign;
 	int		i;
 	int		rtrnval;
 
-	nptrcpy = (char *)nptr;
+	// if (nptr >= LLONG_MIN)
+	// 	return (0);
 	sign = 0;
 	i = 0;
 	rtrnval = 0;
-	if ((nptrcpy[i] >= '0' && nptrcpy[i] <= '9') || (nptrcpy[i] == '-')
-		|| (nptrcpy[i] == '+') || checkspace(nptrcpy + i))
+	if ((nptr[i] >= '0' && nptr[i] <= '9') || (nptr[i] == '-')
+		|| (nptr[i] == '+') || checkspace(nptr + i))
 	{
-		while (checkspace(nptrcpy + i) || nptrcpy[i] == '+')
+		while (checkspace(nptr + i) || nptr[i] == '+')
+		{
+			if (nptr[i] == '+' && checkspace(nptr + (i + 1)))
+				return (0);
 			i++;
-		checksign(nptrcpy, &i, &sign);
-		while (nptrcpy[i] >= '0' && nptrcpy[i] <= '9')
-			rtrnval = (rtrnval * 10) + (nptrcpy[i++] - '0');
+		}
+		checksign(nptr, &i, &sign);
+		while (nptr[i] >= '0' && nptr[i] <= '9')
+			rtrnval = (rtrnval * 10) + (nptr[i++] - '0');
 		if (sign == 1)
 			rtrnval *= -1;
 		return (rtrnval);

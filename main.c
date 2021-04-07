@@ -48,7 +48,7 @@ int main(void)
     // char src[] = "Hello";
     // char dest[5];
     
-    // ft_memcpy(dest, src, 3);
+    //ft_memcpy(NULL, NULL, 3);
     // printf("%s\n", dest);
 
     //memccpy
@@ -110,14 +110,14 @@ int main(void)
     // printf("%zu", ft_strlen(str));
 
 	//strlcpy
-	// char	src[] = "Copier";
-	// char	dest[] = "Hello";
+	// char	src[] = "copyme";
+	// char	dest[] = "test123456789";
 
-	// printf("%zu\n", ft_strlcpy(dest, src, 7));
+	// printf("%zu\n", strlcpy(dest, src, 10));
 	// printf("%s\n", dest);
 
 	//strlcat
-	// int size = 0;
+	// int size = 10;
 	// char dest[] = "Hello";
 	// char src[] = "Goodbye";
 	// char buffer[size];
@@ -174,10 +174,10 @@ int main(void)
 	// printf("%d\n", ft_strncmp(str5, str6, 2));
 
 	//atoi
-	// char nb[] = "  		-2147483648";
+	char nb[] = "-9223372036854775806";
 
-	// printf("%d\n", atoi(nb));
-	// printf("%d\n", ft_atoi(nb));
+	printf("%d\n", atoi(nb));
+	printf("%d\n", ft_atoi(nb));
 
 	//isalpha
 	// printf("%d\n", isalpha(20));
