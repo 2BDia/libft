@@ -259,25 +259,44 @@ int main(void)
 	// free(dest);
 
 	//strtrim
+	// char src[] = "CUTca devrait s'afficherCUTTUUC";
+	// char *str;
 
+	// str = ft_strtrim(src, "CUT");
+	// printf("%s", str);
+	// free(str);
 
 	//slpit
-	char	str[] = "SalutcccBonjourccokchellocahah";
-	char	**strs;
-	int		i;
+	// char	str[] = "SalutcccBonjourccokchellocahah";
+	// char	**strs;
+	// int		i;
 
-	i = 0;
-	strs = ft_split(str, 'c');
-	if (strs != NULL)
-	{
-		while (strs[i])
-			printf("%s\n", strs[i++]);
-		i = 0;
-		while (strs[i])
-			free(strs[i++]);
-		free(strs);	
-	}
+	// i = 0;
+	// strs = ft_split(str, 'c');
+	// if (strs != NULL)
+	// {
+	// 	while (strs[i])
+	// 		printf("%s\n", strs[i++]);
+	// 	i = 0;
+	// 	while (strs[i])
+	// 		free(strs[i++]);
+	// 	free(strs);	
+	// }
 	
+	//ft_itoa
+	char *a;
+
+	a = ft_itoa(-850);
+	printf("%s\n", a);
+	a = ft_itoa(0);
+	printf("%s\n", a);
+	a = ft_itoa(2147483647);
+	printf("%s\n", a);
+	a = ft_itoa(-2147483648);
+	printf("%s\n", a);
+	a = ft_itoa(-0);
+	printf("%s\n", a);
+	free(a);
 
 	// return (0);
 }
