@@ -23,5 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return (scpy + i);
 		i++;
 	}
+	if (c == '\0')
+		return (scpy + i);
 	return ((void *)0);
 }
