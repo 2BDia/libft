@@ -13,7 +13,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include "libft.h"
+
+char	up(char c)
+{
+	return (c - 32);
+}
+
+char	lower(char c)
+{
+	return (c + 32);
+}
 
 int main(void)
 {
@@ -284,19 +297,55 @@ int main(void)
 	// }
 	
 	//ft_itoa
-	char *a;
+	// char *a;
 
-	a = ft_itoa(-850);
-	printf("%s\n", a);
-	a = ft_itoa(0);
-	printf("%s\n", a);
-	a = ft_itoa(2147483647);
-	printf("%s\n", a);
-	a = ft_itoa(-2147483648);
-	printf("%s\n", a);
-	a = ft_itoa(-0);
-	printf("%s\n", a);
-	free(a);
+	// a = ft_itoa(-850);
+	// printf("%s\n", a);
+	// a = ft_itoa(0);
+	// printf("%s\n", a);
+	// a = ft_itoa(2147483647);
+	// printf("%s\n", a);
+	// a = ft_itoa(-2147483648);
+	// printf("%s\n", a);
+	// a = ft_itoa(-0);
+	// printf("%s\n", a);
+	// free(a);
 
-	// return (0);
+	//strmapi
+	// char	(*ptr)(char);
+
+	// ptr = &up;
+	// printf("%s\n", ft_strmapi("hello", ptr));
+
+	//putchar_fd
+	// int	fd;
+
+	// fd = open("file.txt", O_RDWR | O_CREAT);
+	// ft_putchar_fd('c', fd);
+
+	//putstr_fd /putendl_fd
+	// int	fd;
+
+	// fd = open("file.txt", O_RDWR | O_CREAT);
+	// ft_putstr_fd("phrase de test", fd);
+	// ft_putendl_fd("phrase de test", fd);
+
+	//putnbr_fd
+	// int	fd;
+	// FILE *fichier = NULL;
+	// char str[12] = "";
+
+	// fd = open("file.txt", O_RDWR | O_CREAT);
+	// ft_putnbr_fd(-2147483648, fd);
+	// close(fd);
+	// chmod("file.txt", S_IRUSR | S_IWUSR | S_IXUSR);
+	// fichier = fopen("file.txt", "r+");
+	// fgets(str, 12, fichier);
+	// printf("%s\n", str);
+	// if (remove("file.txt") == 0)
+    // 	printf("Deleted successfully");
+	// else
+    // 	printf("Unable to delete the file");
+
+	return (0);
 }
