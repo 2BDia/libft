@@ -30,6 +30,18 @@ char	lower(unsigned int n, char c)
 	return (c + 32);
 }
 
+void	ft_putstr(char *str)
+{
+	int itr;
+
+	itr = 0;
+	while (str[itr] != '\0')
+	{
+		write(1, &str[itr], 1);
+		itr++;
+	}
+}
+
 int main(void)
 {
     //memset
@@ -314,13 +326,13 @@ int main(void)
 	// free(a);
 
 	//strmapi
-	char	(*ptr)(unsigned int, char);
-	char	*str;
+	// char	(*ptr)(unsigned int, char);
+	// char	*str;
 
-	ptr = &up;
-	str = ft_strmapi("hello", ptr);
-	printf("%s\n", str);
-	free(str);
+	// ptr = &up;
+	// str = ft_strmapi("hello", ptr);
+	// printf("%s\n", str);
+	// free(str);
 
 	//putchar_fd
 	// int	fd;
@@ -351,6 +363,32 @@ int main(void)
     // 	printf("Deleted successfully");
 	// else
     // 	printf("Unable to delete the file");
+
+	//////////////////////////////////////////////////////////////////////////
+	//BONUS
+
+	//lstnew
+	// t_list	*list;
+
+	// list = ft_lstnew("hello");
+	// ft_putstr(list->content);
+	// printf("\n");
+	// ft_putstr(list->next->content);
+	// free(list);
+
+	//lstadd_front
+	// t_list	*list[1];
+	// t_list	*new;
+
+	// new = ft_lstnew("hello");
+	// ft_lstadd_front(list, new);
+	// ft_putstr(list[0]->content);
+	// printf("\n");
+	// ft_putstr(list[0]->next->content);
+	// free(new);
+
+	//lstsize
+	
 
 	return (0);
 }
