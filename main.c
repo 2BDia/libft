@@ -18,13 +18,15 @@
 #include <unistd.h>
 #include "libft.h"
 
-char	up(char c)
+char	up(unsigned int n, char c)
 {
+	printf("%d", n);
 	return (c - 32);
 }
 
-char	lower(char c)
+char	lower(unsigned int n, char c)
 {
+	printf("%d", n);
 	return (c + 32);
 }
 
@@ -174,10 +176,10 @@ int main(void)
 	// printf("%d\n", ft_strncmp(str5, str6, 2));
 
 	//atoi
-	char nb[] = "-9223372036854775806";
+	// char nb[] = "-9223372036854775808";
 
-	printf("%d\n", atoi(nb));
-	printf("%d\n", ft_atoi(nb));
+	// printf("%d\n", atoi(nb));
+	// printf("%d\n", ft_atoi(nb));
 
 	//isalpha
 	// printf("%d\n", isalpha(20));
@@ -312,10 +314,13 @@ int main(void)
 	// free(a);
 
 	//strmapi
-	// char	(*ptr)(char);
+	char	(*ptr)(unsigned int, char);
+	char	*str;
 
-	// ptr = &up;
-	// printf("%s\n", ft_strmapi("hello", ptr));
+	ptr = &up;
+	str = ft_strmapi("hello", ptr);
+	printf("%s\n", str);
+	free(str);
 
 	//putchar_fd
 	// int	fd;
