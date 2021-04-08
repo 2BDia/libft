@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:38:42 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/07 10:51:16 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/08 12:54:47 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,10 @@ char	*ft_itoa(int value)
 {
 	char		*str;
 	int			i;
-	int			j;
 	long int	quotient;
 	int			sign;
 
 	i = 0;
-	j = 1;
 	sign = checksign(&quotient, value);
 	while (quotient >= 10)
 	{

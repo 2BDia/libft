@@ -36,8 +36,6 @@ int	ft_atoi(const char *nptr)
 	int		i;
 	int		rtrnval;
 
-	// if (nptr >= LLONG_MIN)
-	// 	return (0);
 	sign = 0;
 	i = 0;
 	rtrnval = 0;
