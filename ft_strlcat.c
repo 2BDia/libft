@@ -6,33 +6,31 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:09:16 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/06 13:32:05 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/09 14:01:38 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
 	size_t	i;
-	size_t	lendst;
+	size_t	j;
 	size_t	lensrc;
+	size_t	lendst;
 
 	i = 0;
-	lendst = ft_strlen(dst);
+	j = 0;
 	lensrc = ft_strlen(src);
-	if (dstsize == 0)
-		return (lensrc);
-	if (dstsize < lensrc)
-		return (dstsize + lensrc);
-	while (src[i] && lendst + i < dstsize)
-	{
-		dst[i + lendst] = src[i];
+	lendst = ft_strlen(dst);
+	while (dst[i] != '\0')
 		i++;
-	}
-	if ((lendst + i) == dstsize && lendst < dstsize)
-		dst[lendst + --i] = '\0';
-	else
-		dst[lendst + i] = '\0';
-	return (lendst + lensrc);
+	while (src[j] != '\0' && i + 1 < n)
+		dst[i++] = src[j++];
+	dst[i] = '\0';
+	if (n >= lendst)
+		return (lensrc + lendst);
+	else if (n <= lendst)
+		return (n + lensrc);
+	return (i);
 }

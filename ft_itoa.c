@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 09:38:42 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/08 12:54:47 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/09 15:51:51 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	placestr(char *str, int value, int i, int sign)
 	int			j;
 
 	j = 1;
-	while (i-- > 0)
+	while (--i > 0)
 		j *= 10;
 	i = 0;
 	if (sign == 1)
@@ -64,12 +64,15 @@ char	*ft_itoa(int value)
 
 	i = 0;
 	sign = checksign(&quotient, value);
-	while (quotient >= 10)
+	while (quotient > 0)
 	{
 		quotient /= 10;
 		i++;
 	}
-	str = malloc(sizeof(char) * (i + 2));
+	if (value == 0)
+		str = malloc(sizeof(char) * (i + 2));
+	else
+		str = malloc(sizeof(char) * (i + 1 + sign));
 	if (!str)
 		return (NULL);
 	placestr(str, value, i, sign);

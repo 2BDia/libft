@@ -323,20 +323,20 @@ int main(void)
 	// free(dest);
 
 	//strtrim
-	// char src[] = "CUTca devrait s'afficherCUTTUUC";
+	// char src[] = "  \t \t \n   \n\n\n\t";
 	// char *str;
 
-	// str = ft_strtrim(src, "CUT");
+	// str = ft_strtrim(src, " \n\t");
 	// printf("%s", str);
 	// free(str);
 
 	//slpit
-	// char	str[] = "SalutcccBonjourccokchellocahah";
+	// char	str[] = "     split       this for   me  !       ";
 	// char	**strs;
 	// int		i;
 
 	// i = 0;
-	// strs = ft_split(str, 'c');
+	// strs = ft_split(str, ' ');
 	// if (strs != NULL)
 	// {
 	// 	while (strs[i])
@@ -347,7 +347,7 @@ int main(void)
 	// 	free(strs);	
 	// }
 	
-	//ft_itoa
+	//itoa
 	// char *a;
 
 	// a = ft_itoa(-850);
