@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);
 	if (lens1 + lens2 == 0)

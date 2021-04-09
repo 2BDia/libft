@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		k;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	k = 0;
 	if (!s[i])

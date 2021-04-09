@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 13:39:27 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/07 13:42:21 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/09 16:16:15 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	while (s[i])
-		write(fd, &s[i++], 1);
-	write(fd, "\n", 1);
+	if (s)
+	{
+		while (s[i])
+			write(fd, &s[i++], 1);
+		write(fd, "\n", 1);
+	}
 }
