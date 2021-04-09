@@ -27,6 +27,18 @@ static int	isinset(char const *set, char c)
 	return (0);
 }
 
+static void	startword(const char *s1, const char *set, int *i)
+{
+	while (s1[*i] && isinset(set, s1[*i]) == 1)
+		*i += 1;
+}
+
+static void	endword(const char *s1, const char *set, int *j)
+{
+	while (*j > 0 && isinset(set, s1[*j]) == 1)
+		*j -= 1;
+}
+
 static void	setvar(int *i, int *k)
 {
 	*i = 0;
@@ -45,13 +57,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	lens1 = ft_strlen(s1);
 	setvar(&i, &k);
-	while (s1[i] && isinset(set, s1[i]) == 1)
-		i++;
+	startword(s1, set, &i);
 	if (i == lens1)
 		return (ft_strdup(""));
 	j = lens1 - 1;
-	while (j > 0 && isinset(set, s1[j]) == 1)
-		j--;
+	endword(s1, set, &j);
 	str = (char *)malloc(sizeof(char) * (((j + 1) - i) + 1));
 	if (!str)
 		return (NULL);

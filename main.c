@@ -425,7 +425,19 @@ int main(void)
 	// free(new);
 
 	//lstsize
-	
+	// t_list *l;
+
+	// l = lstnew(strdup("1"));
+	// l->next = lstnew(strdup("2"));
+	// l->next->next = lstnew(strdup("3"));
+	// printf("%d\n", ft_lstsize(l));
+
+	//lstlast
+	// t_list *l;
+
+	// l = lstnew(strdup("1"));
+	// l->next = lstnew(strdup("2"));
+	// l->next->next = lstnew(strdup("3"));
 
 	return (0);
 }
