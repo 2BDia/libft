@@ -14,7 +14,6 @@
 
 int	ft_lstsize(t_list *lst)
 {
-
 	while (lst[i].next)
 	{
 		i++;

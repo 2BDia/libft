@@ -31,6 +31,15 @@ static int	alloc(char **strs, int j, int g)
 	return (1);
 }
 
+static void	nextword(const char *s, char c, int *i, int *l)
+{
+	while (s[*i] == c)
+	{
+		*i += 1;
+		*l += 1;
+	}
+}
+
 static int	alnput(const char *s, char **strs, char c)
 {
 	int	i;
@@ -42,6 +51,8 @@ static int	alnput(const char *s, char **strs, char c)
 	setvars(&i, &j, &l, &g);
 	while (s[i])
 	{
+		if (i == 0)
+			nextword(s, c, &i, &l);
 		while (s[i] != c && s[i])
 			i++;
 		g = i - l;
@@ -51,8 +62,7 @@ static int	alnput(const char *s, char **strs, char c)
 		while (k < g)
 			strs[j][k++] = s[l++];
 		strs[j][k] = '\0';
-		while (s[i++] == c)
-			l++;
+		nextword(s, c, &i, &l);
 		j++;
 	}
 	strs[j] = NULL;
@@ -72,11 +82,11 @@ char	**ft_split(char const *s, char c)
 	while (s[k])
 	{
 		if (s[k] == c)
-			if (s[k + 1] != c)
+			if (s[k + 1] != c && s[k + 1] != '\0')
 				i++;
 		k++;
 	}
-	strs = (char **)malloc(sizeof(char *) * (i + 2));
+	strs = (char **)malloc(sizeof(char *) * (i + 1));
 	if (!strs)
 		return (NULL);
 	if (alnput(s, strs, c) == 0)
