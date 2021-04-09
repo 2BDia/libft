@@ -123,12 +123,30 @@ int main(void)
 
     // printf("%zu", ft_strlen(str));
 
-	//strlcpy
+	// strlcpy
 	// char	src[] = "copyme";
 	// char	dest[] = "test123456789";
 
-	// printf("%zu\n", strlcpy(dest, src, 10));
+	// printf("%zu\n", ft_strlcpy(dest, src, 10));
 	// printf("%s\n", dest);
+
+	// char	*str = "BBBB";
+	// char	buff1[5];
+
+	// memset(buff1, 'A', 1);
+	// printf("%zu\n", ft_strlcpy(buff1, str, sizeof(buff1)));
+	// printf("%s\n", buff1);
+
+	// char	*str = "BBBB";
+	// char	buff1[0xF00];
+	// char	buff2[0xF00];
+
+	// memset(buff1, 'A', 20);
+	// memset(buff2, 'A', 20);
+
+	// printf("%zu vs %zu\n", strlcpy(buff1, str, sizeof(buff1)), ft_strlcpy(buff2, str, sizeof(buff2)));
+	// printf("%lu vs %lu\n", sizeof(buff1), sizeof(buff2));
+	// printf("%s vs %s\n", buff1, buff2);
 
 	//strlcat
 	// int size = 10;
@@ -145,6 +163,25 @@ int main(void)
 
 	// printf("%zu\n", ft_strlcat(buffer, src, size));
 	// printf("%s", buffer);
+
+	// char	*src = "aaa";
+	// char	dst1[20];
+	// char	dst2[20];
+	// int		ret1;
+	// int		ret2;
+
+	// memset(dst1, 'B', sizeof(dst1));
+	// memset(dst2, 'B', sizeof(dst2));
+
+	// strlcat(dst1, src, 20);
+	// strlcat(dst1, src, 20);
+	// ret1 = strlcat(dst1, src, 20);
+	// printf("%d\n", ret1);
+
+	// ft_strlcat(dst2, src, 20);
+	// ft_strlcat(dst2, src, 20);
+	// ret2 = ft_strlcat(dst2, src, 20);
+	// printf("%d\n", ret2);
 
     //strchr
     // char str[] = "Trouve un z dans cette chaine!";
@@ -188,7 +225,7 @@ int main(void)
 	// printf("%d\n", ft_strncmp(str5, str6, 2));
 
 	//atoi
-	// char nb[] = "-9223372036854775808";
+	// char nb[] = "-9223372036854775809";
 
 	// printf("%d\n", atoi(nb));
 	// printf("%d\n", ft_atoi(nb));

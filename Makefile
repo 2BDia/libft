@@ -49,6 +49,7 @@ SRCO	= ft_atoi.o			\
 			ft_bzero.o		\
 			ft_calloc.o		\
 			ft_isalnum.o	\
+			ft_isalpha.o	\
 			ft_isascii.o	\
         	ft_isdigit.o	\
 			ft_isprint.o	\

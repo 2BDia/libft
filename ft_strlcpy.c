@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 14:30:38 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/05 15:03:42 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/09 11:08:12 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	char	*srccpy;
 
 	i = 0;
-	srccpy = (char *)src;
-	if (dstsize > 0 && dstsize <= ft_strlen(dst) + 1)
+	if (!dst)
+		return (0);
+	if (dstsize > 0)
 	{
-		while (srccpy[i] && i < dstsize - 1)
+		while (src[i] && i < dstsize - 1)
 		{
-			dst[i] = srccpy[i];
+			dst[i] = src[i];
 			i++;
 		}
 		dst[i] = '\0';

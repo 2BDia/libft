@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 11:42:00 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/08 14:42:14 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/09 10:32:40 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
+	i = 0;
 	while (s[i])
 	{
 		str[i] = f(i, s[i]);
