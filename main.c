@@ -18,6 +18,11 @@
 #include <unistd.h>
 #include "libft.h"
 
+void	del(void *content)
+{
+	free(content);
+}
+
 char	up(unsigned int n, char c)
 {
 	printf("%d", n);
@@ -438,6 +443,17 @@ int main(void)
 	// l = lstnew(strdup("1"));
 	// l->next = lstnew(strdup("2"));
 	// l->next->next = lstnew(strdup("3"));
+
+	//lstdelone
+	t_list *l;
+	void	(*ptr)(void *content);
+
+	ptr = &del;
+	l = ft_lstnew("hello");
+	ft_putstr(l->content);
+	printf("\n");
+	ft_lstdelone(l, ptr);
+	ft_putstr(l->content);
 
 	return (0);
 }
