@@ -6,7 +6,7 @@
 #    By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/04 16:48:31 by rvan-aud          #+#    #+#              #
-#    Updated: 2021/04/04 16:48:31 by rvan-aud         ###   ########.fr        #
+#    Updated: 2021/04/12 11:32:27 by rvan-aud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,15 +19,6 @@ SRCS	= ft_atoi.c				\
 			ft_isdigit.c		\
 			ft_isprint.c		\
 			ft_itoa.c			\
-			ft_lstadd_back.c	\
-			ft_lstadd_front.c	\
-			ft_lstclear.c		\
-			ft_lstdelone.c		\
-			ft_lstiter.c		\
-			ft_lstlast.c		\
-			ft_lstmap.c			\
-			ft_lstnew.c			\
-			ft_lstsize.c		\
 			ft_memccpy.c		\
 			ft_memchr.c			\
 			ft_memcmp.c			\
@@ -54,51 +45,19 @@ SRCS	= ft_atoi.c				\
 			ft_tolower.c		\
 			ft_toupper.c		\
 
-SRCO	= ft_atoi.o				\
-			ft_bzero.o			\
-			ft_calloc.o			\
-			ft_isalnum.o		\
-			ft_isalpha.o		\
-			ft_isascii.o		\
-        	ft_isdigit.o		\
-			ft_isprint.o		\
-			ft_itoa.o			\
-			ft_lstadd_back.o	\
-			ft_lstadd_front.o	\
-			ft_lstclear.o		\
-			ft_lstdelone.o		\
-			ft_lstiter.o		\
-			ft_lstlast.o		\
-			ft_lstmap.o			\
-			ft_lstnew.o			\
-			ft_lstsize.o		\
-			ft_memccpy.o		\
-			ft_memchr.o			\
-			ft_memcmp.o			\
-			ft_memcpy.o			\
-			ft_memmove.o		\
-			ft_memset.o			\
-			ft_putchar_fd.o		\
-			ft_putendl_fd.o		\
-			ft_putnbr_fd.o		\
-			ft_putstr_fd.o		\
-			ft_split.o			\
-			ft_strchr.o			\
-			ft_strdup.o			\
-			ft_strjoin.o		\
-			ft_strlcat.o		\
-			ft_strlcpy.o		\
-			ft_strlen.o			\
-			ft_strmapi.o		\
-			ft_strncmp.o		\
-			ft_strnstr.o		\
-			ft_strrchr.o		\
-			ft_strtrim.o		\
-			ft_substr.o			\
-			ft_tolower.o		\
-			ft_toupper.o		\
+SRCSB	= ft_lstadd_back.c	\
+			ft_lstadd_front.c	\
+			ft_lstclear.c		\
+			ft_lstdelone.c		\
+			ft_lstiter.c		\
+			ft_lstlast.c		\
+			ft_lstmap.c			\
+			ft_lstnew.c			\
+			ft_lstsize.c		\
 
 NAME	= libft.a
+
+BONUS	= bonus
 
 CC		= gcc
 
@@ -108,6 +67,8 @@ CFLAGS	= -Wall -Wextra -Werror
 
 OBJS	= ${SRCS:.c=.o}
 
+OBJSB	= ${SRCSB:.c=.o}
+
 .c.o:
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
@@ -115,17 +76,18 @@ ${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
 			ranlib ${NAME}
 
+${BONUS}:	${OBJS} ${OBJSB}
+			ar rc ${NAME} ${OBJS} ${OBJSB}
+			ranlib ${NAME}
+
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${OBJSB}
 
 fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
 
-gitclean:
-			git rm ${SRCO}
-
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus

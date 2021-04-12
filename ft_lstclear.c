@@ -6,11 +6,10 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 09:56:18 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/12 10:28:26 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/12 11:22:06 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
