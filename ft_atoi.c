@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	checkspace(const char *str)
+static int	checkspace(char c)
 {
-	if (*str == ' ' || *str == '\n' || *str == '\f'
-		|| *str == '\r' || *str == '\t' || *str == '\v')
+	if (c == ' ' || c == '\n' || c == '\f'
+		|| c == '\r' || c == '\t' || c == '\v')
 		return (1);
 	else
 		return (0);
@@ -28,17 +28,6 @@ static void	checksign(const char *nptr, int *i, int *sign)
 	}
 }
 
-static int	checkskipstart(const char *nptr, int *i)
-{
-	while (checkspace(nptr + *i) || nptr[*i] == '+')
-	{
-		if (nptr[*i] == '+' && checkspace(nptr + (*i + 1)))
-			return (0);
-		*i += 1;
-	}
-	return (1);
-}
-
 int	ft_atoi(const char *nptr)
 {
 	int				sign;
@@ -48,21 +37,20 @@ int	ft_atoi(const char *nptr)
 	sign = 0;
 	i = 0;
 	rtrnval = 0;
-	if ((nptr[i] >= '0' && nptr[i] <= '9') || (nptr[i] == '-')
-		|| (nptr[i] == '+') || checkspace(nptr + i))
-	{
-		if (checkskipstart(nptr, &i) == 0)
-			return (0);
+	while (checkspace(nptr[i]))
+		i++;
+	if (nptr[i] == '+')
+		i++;
+	else if (nptr[i] == '-')
 		checksign(nptr, &i, &sign);
-		while (nptr[i] >= '0' && nptr[i] <= '9')
-			rtrnval = (rtrnval * 10) + (nptr[i++] - '0');
-		if (sign == 1)
-			rtrnval *= -1;
-		if (sign == 0 && rtrnval < 0)
-			return (-1);
-		else if (sign == 1 && rtrnval > 0)
-			return (0);
-		return ((int)rtrnval);
-	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+		rtrnval = (rtrnval * 10) + (nptr[i++] - '0');
+	if (sign == 1)
+		rtrnval *= -1;
+	if (sign == 0 && rtrnval < 0)
+		return (-1);
+	else if (sign == 1 && rtrnval > 0)
+		return (0);
+	return ((int)rtrnval);
 	return (0);
 }

@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	while (i >= 0)
 	{
-		if (scpy[i] == c)
+		if (scpy[i] == (char)c)
 			return (scpy + i);
 		i--;
 	}

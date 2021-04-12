@@ -12,18 +12,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	*scpy;
-
-	scpy = (char *)s;
-	i = 0;
-	while (scpy[i])
+	while (*s)
 	{
-		if (scpy[i] == c)
-			return (scpy + i);
-		i++;
+		if (*(char *)s == (char)c)
+			return ((char *)s);
+		s++;
 	}
 	if (c == '\0')
-		return (scpy + i);
+		return ((char *)s);
 	return ((void *)0);
 }
