@@ -21,8 +21,11 @@ SRCS	= ft_atoi.c				\
 			ft_itoa.c			\
 			ft_lstadd_back.c	\
 			ft_lstadd_front.c	\
+			ft_lstclear.c		\
 			ft_lstdelone.c		\
+			ft_lstiter.c		\
 			ft_lstlast.c		\
+			ft_lstmap.c			\
 			ft_lstnew.c			\
 			ft_lstsize.c		\
 			ft_memccpy.c		\
@@ -62,8 +65,11 @@ SRCO	= ft_atoi.o				\
 			ft_itoa.o			\
 			ft_lstadd_back.o	\
 			ft_lstadd_front.o	\
+			ft_lstclear.o		\
 			ft_lstdelone.o		\
+			ft_lstiter.o		\
 			ft_lstlast.o		\
+			ft_lstmap.o			\
 			ft_lstnew.o			\
 			ft_lstsize.o		\
 			ft_memccpy.o		\

@@ -47,6 +47,23 @@ void	ft_putstr(char *str)
 	}
 }
 
+void	lstiter_f(void *content)
+{
+	char *s = content;
+
+	s[0] = 'O';
+	s[1] = 'K';
+}
+
+void	*lstiter_frtn(void *content)
+{
+	char *s = content;
+
+	s[0] = 'O';
+	s[1] = 'K';
+	return (s);
+}
+
 int main(void)
 {
     //memset
@@ -445,15 +462,49 @@ int main(void)
 	// l->next->next = lstnew(strdup("3"));
 
 	//lstdelone
-	t_list *l;
-	void	(*ptr)(void *content);
+	// t_list *l;
+	// void	(*ptr)(void *content);
 
-	ptr = &del;
-	l = ft_lstnew("hello");
+	// ptr = &del;
+	// l = ft_lstnew("hello");
+	// ft_putstr(l->content);
+	// printf("\n");
+	// ft_lstdelone(l, ptr);
+	// ft_putstr(l->content);
+
+	//lstclear
+	// t_list	*l;
+	// void	(*ptr)(void *content);
+
+	// ptr = &lstiter_f;
+	// l = ft_lstnew(strdup("KO !"));
+	// l->next = ft_lstnew(strdup("KO !"));
+	// l->next->next = ft_lstnew(strdup("KO !"));
+	// ft_lstiter(l, ptr);
+	// ft_putstr(l->content);
+	// printf("\n");
+	// ft_putstr(l->next->content);
+	// printf("\n");
+	// ft_putstr(l->next->next->content);
+	// printf("\n");
+
+	//lstmap
+	t_list	*l;
+	void	*(*ptr)(void *content);
+	void	(*ptr2)(void *content);
+
+	ptr = &lstiter_frtn;
+	ptr2 = &del;
+	l = ft_lstnew(strdup(" 1 2 3 "));
+	l->next = ft_lstnew(strdup("ss"));
+	l->next->next = ft_lstnew(strdup("-_-"));
+	ft_lstmap(l, ptr, ptr2);
 	ft_putstr(l->content);
 	printf("\n");
-	ft_lstdelone(l, ptr);
-	ft_putstr(l->content);
+	ft_putstr(l->next->content);
+	printf("\n");
+	ft_putstr(l->next->next->content);
+	printf("\n");
 
 	return (0);
 }
