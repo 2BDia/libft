@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-
 static int	checkspace(const char *str)
 {
 	if (*str == ' ' || *str == '\n' || *str == '\f'

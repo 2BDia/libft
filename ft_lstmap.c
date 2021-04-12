@@ -6,11 +6,10 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 10:33:01 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/12 11:14:25 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/12 11:22:32 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
