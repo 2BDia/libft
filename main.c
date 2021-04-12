@@ -126,6 +126,11 @@ int main(void)
 	// printf("%s\n", ft_memchr(src1, 'z', 15));
 	// printf("%s\n", ft_memchr(src1, 'z', 5));
 
+	// char s[] = {0, 1, 2 ,3 ,4 ,5};
+
+	// printf("%s\n", ft_memchr(s, 0, 0));
+	// printf("%s\n", memchr(s, 0, 0));
+
     //memcmp
 	// char	str1[] = "A tester";
 	// char	str2[] = "A tester";
@@ -226,8 +231,8 @@ int main(void)
     // printf("%s\n", ft_strnstr(str2, "is", 4));
 
 	//strncmp
-	// char str1[] = "pare!l";
-    // char str2[] = "pare!l";
+	// char str1[] = "the ";
+    // char str2[] = "there is ";
 
     // printf("%d\n", strncmp(str1, str2, 7));
 	// printf("%d\n", ft_strncmp(str1, str2, 7));
@@ -248,6 +253,7 @@ int main(void)
 
 	//atoi
 	// char nb[] = "-9223372036854775809";
+	// char nb[] = "";
 
 	// printf("%d\n", atoi(nb));
 	// printf("%d\n", ft_atoi(nb));
@@ -336,11 +342,12 @@ int main(void)
 	// free(dest);
 
 	//strjoin
-	// char	s1[] = "First and";
-	// char	s2[] = " second strings";
+	// char	s1[] = "";
+	// char	s2[] = "";
 	// char *dest;
 
-	// dest = ft_strjoin(s1, s2);
+	// dest = ft_strjoin("", "");
+	// printf("%d\n", strcmp(dest, ""));
 	// printf("%s", dest);
 	// free(dest);
 
@@ -353,21 +360,21 @@ int main(void)
 	// free(str);
 
 	//slpit
-	// char	str[] = "     split       this for   me  !       ";
-	// char	**strs;
-	// int		i;
+	char	str[] = "     ";
+	char	**strs;
+	int		i;
 
-	// i = 0;
-	// strs = ft_split(str, ' ');
-	// if (strs != NULL)
-	// {
-	// 	while (strs[i])
-	// 		printf("%s\n", strs[i++]);
-	// 	i = 0;
-	// 	while (strs[i])
-	// 		free(strs[i++]);
-	// 	free(strs);	
-	// }
+	i = 0;
+	strs = ft_split(str, ' ');
+	if (strs != NULL)
+	{
+		while (strs[i])
+			printf("%s\n", strs[i++]);
+		i = 0;
+		while (strs[i])
+			free(strs[i++]);
+		free(strs);	
+	}
 	
 	//itoa
 	// char *a;

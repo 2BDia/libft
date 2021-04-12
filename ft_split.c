@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 static void	setvars(int *i, int *j, int *l, int *g)
 {
@@ -62,7 +63,8 @@ static int	alnput(const char *s, char **strs, char c)
 		while (k < g)
 			strs[j][k++] = s[l++];
 		strs[j][k] = '\0';
-		nextword(s, c, &i, &l);
+		if (c != '\0')
+			nextword(s, c, &i, &l);
 		j++;
 	}
 	strs[j] = NULL;
@@ -83,11 +85,13 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (s[k])
 	{
-		if (s[k] == c)
-			if (s[k + 1] != c && s[k + 1] != '\0')
-				i++;
+		if ((s[k + 1] == c || s[k + 1] == '\0') && s[k] != c)
+			i++;
 		k++;
 	}
+	// if (c == '\0')
+	// 	strs = (char **)malloc(sizeof(char *) * (i + 2));
+	// if
 	strs = (char **)malloc(sizeof(char *) * (i + 1));
 	if (!strs)
 		return (NULL);
