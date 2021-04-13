@@ -22,8 +22,8 @@ static int	freestrs(char **strs, int j)
 
 static int	countwords(char const *s, char c)
 {
-	int wc;
-	int i;
+	int	wc;
+	int	i;
 
 	wc = 0;
 	i = 0;
@@ -53,8 +53,8 @@ static int	countnext(char const *s, char c, int i)
 
 static int	alnput(char const *s, char **strs, char c, int wc)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 	int	k;
 
 	i = 0;
@@ -79,7 +79,7 @@ static int	alnput(char const *s, char **strs, char c, int wc)
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	int 	wc;
+	int		wc;
 
 	if (!s)
 		return (NULL);
