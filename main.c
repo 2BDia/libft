@@ -360,7 +360,7 @@ int main(void)
 	// free(str);
 
 	//slpit
-	char	str[] = "     ";
+	char	str[] = "Comment ca va";
 	char	**strs;
 	int		i;
 
