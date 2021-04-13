@@ -45,7 +45,7 @@ SRCS	= ft_atoi.c				\
 			ft_tolower.c		\
 			ft_toupper.c		\
 
-SRCSB	= ft_lstadd_back.c	\
+SRCSB	= ft_lstadd_back.c		\
 			ft_lstadd_front.c	\
 			ft_lstclear.c		\
 			ft_lstdelone.c		\

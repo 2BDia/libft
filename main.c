@@ -360,21 +360,21 @@ int main(void)
 	// free(str);
 
 	//slpit
-	char	str[] = " va   ";
-	char	**strs;
-	int		i;
+	// char	str[] = " va   ";
+	// char	**strs;
+	// int		i;
 
-	i = 0;
-	strs = ft_split(str, ' ');
-	if (strs != NULL)
-	{
-		while (strs[i])
-			printf("%s\n", strs[i++]);
-		i = 0;
-		while (strs[i])
-			free(strs[i++]);
-		free(strs);	
-	}
+	// i = 0;
+	// strs = ft_split(str, ' ');
+	// if (strs != NULL)
+	// {
+	// 	while (strs[i])
+	// 		printf("%s\n", strs[i++]);
+	// 	i = 0;
+	// 	while (strs[i])
+	// 		free(strs[i++]);
+	// 	free(strs);	
+	// }
 	
 	//itoa
 	// char *a;
