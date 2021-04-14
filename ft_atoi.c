@@ -52,5 +52,4 @@ int	ft_atoi(const char *nptr)
 	else if (sign == 1 && rtrnval > 0)
 		return (0);
 	return ((int)rtrnval);
-	return (0);
 }
