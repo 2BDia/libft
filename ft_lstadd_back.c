@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:30:54 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/12 09:54:48 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/14 11:44:01 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
-
+	if (!lst || !new)
+		return ;
 	if (*lst)
 	{
 		ptr = ft_lstlast(*lst);

@@ -506,22 +506,22 @@ int main(void)
 	// printf("\n");
 
 	//lstmap
-	// t_list	*l;
-	// void	*(*ptr)(void *content);
-	// void	(*ptr2)(void *content);
+	t_list	*l;
+	void	*(*ptr)(void *content);
+	void	(*ptr2)(void *content);
 
-	// ptr = &lstiter_frtn;
-	// ptr2 = &del;
-	// l = ft_lstnew(strdup(" 1 2 3 "));
-	// l->next = ft_lstnew(strdup("ss"));
-	// l->next->next = ft_lstnew(strdup("-_-"));
-	// ft_lstmap(l, ptr, ptr2);
-	// ft_putstr(l->content);
-	// printf("\n");
-	// ft_putstr(l->next->content);
-	// printf("\n");
-	// ft_putstr(l->next->next->content);
-	// printf("\n");
+	ptr = &lstiter_frtn;
+	ptr2 = &del;
+	l = ft_lstnew(strdup(" 1 2 3 "));
+	l->next = ft_lstnew(strdup("ss"));
+	l->next->next = ft_lstnew(strdup("-_-"));
+	ft_lstmap(l, ptr, ptr2);
+	ft_putstr(l->content);
+	printf("\n");
+	ft_putstr(l->next->content);
+	printf("\n");
+	ft_putstr(l->next->next->content);
+	printf("\n");
 
 	return (0);
 }
