@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 09:56:18 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/12 11:22:06 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/14 11:44:25 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*ptr;
 	t_list	*temp;
 
+	if (!lst || !del)
+		return ;
 	ptr = *lst;
 	while (ptr)
 	{

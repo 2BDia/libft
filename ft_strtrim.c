@@ -53,7 +53,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		lens1;
 	char	*str;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	lens1 = ft_strlen(s1);
 	setvar(&i, &k);

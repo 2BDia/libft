@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 10:33:01 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/12 11:22:32 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/14 12:36:22 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 	t_list	*newcpy;
 
-	if (!lst)
+	if (!lst || !f)
 		return (NULL);
 	new = ft_lstnew(f(lst->content));
 	if (!new)
