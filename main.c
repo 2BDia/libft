@@ -210,6 +210,16 @@ int main(void)
 	// ret2 = ft_strlcat(dst2, src, 20);
 	// printf("%d\n", ret2);
 
+	// char	dest[15];
+	// char	dest2[15];
+
+	// memset(dest, 'r', 15);
+	// memset(dest2, 'r', 15);
+	// printf("%zu\n", ft_strlcat(dest, "lorem ipsum dolor sit amet", 5));
+	// printf("%zu\n", strlcat(dest2, "lorem ipsum dolor sit amet", 5));
+	// printf("%s\n", dest);
+	// printf("%s\n", dest);
+
     //strchr
     // char str[] = "Trouve un z dans cette chaine!";
 

@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:09:16 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/13 19:07:59 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/14 09:49:39 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,19 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
 	size_t	i;
-	size_t	j;
-	size_t	lensrc;
-	size_t	lendst;
+	size_t	srclen;
+	size_t	dstlen;
 
-	j = 0;
-	lensrc = ft_strlen(src);
-	lendst = ft_strlen(dst);
-	if (lendst == 0)
-		return (lensrc);
-	if (n < lendst)
-		return (lensrc + lendst);
-	i = lendst;
-	while (src[j] && j + lendst < n)
-		dst[i++] = src[j++];
-	if ((lendst + j) == n && lendst < n)
-		dst[--i] = '\0';
-	else
-		dst[i] = '\0';
-	return (lensrc + lendst);
+	i = 0;
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dst);
+	if (n - 1 < dstlen || n == 0)
+		return (srclen + n);
+	while (i + dstlen < n - 1 && src[i])
+	{
+		dst[dstlen + i] = src[i];
+		i++;
+	}
+	dst[dstlen + i] = '\0';
+	return (dstlen + srclen);
 }

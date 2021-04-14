@@ -6,7 +6,7 @@
 /*   By: rvan-aud <rvan-aud@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:58:40 by rvan-aud          #+#    #+#             */
-/*   Updated: 2021/04/13 19:01:24 by rvan-aud         ###   ########.fr       */
+/*   Updated: 2021/04/14 09:00:40 by rvan-aud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		*tab;
+	char	*s;
+	size_t	i;
 
-	tab = (int *)malloc(count * size);
-	if (!tab)
+	s = (char *)malloc(count * size);
+	if (!s)
 		return (NULL);
-	ft_bzero(tab, count);
-	return (tab);
+	i = 0;
+	while (i < count * size)
+		s[i++] = 0;
+	return ((void *)s);
 }
